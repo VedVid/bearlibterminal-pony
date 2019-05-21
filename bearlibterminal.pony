@@ -45,6 +45,9 @@ use @color_from_argb[U32](a: U8, r: U8, g: U8, b: U8)
 struct Dimensions
   let width: I32
   let height: I32
+  new create(width': I32, height': I32) =>
+    width = width'
+    height = height'
 
 
 // Constants
