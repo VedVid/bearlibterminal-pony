@@ -42,6 +42,11 @@ use @color_from_name8[U32](name: Pointer[U8 val] tag)
 use @color_from_argb[U32](a: U8, r: U8, g: U8, b: U8)
 
 
+struct Dimensions
+  let width: I32
+  let height: I32
+
+
 // Constants
 class TK
   // Scan codes for events/states
