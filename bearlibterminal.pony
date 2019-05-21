@@ -91,7 +91,7 @@ class TK
   let n9: I32 = 0x26
   let n0: I32 = 0x27
 
-  let return_:    I32 = 0x28
+  let return_key: I32 = 0x28
   let enter :     I32 = 0x28
   let escape:     I32 = 0x29
   let backspace:  I32 = 0x2A
@@ -127,7 +127,7 @@ class TK
   let home:     I32 = 0x4A
   let pageup:   I32 = 0x4B
   let delete:   I32 = 0x4C
-  let end_:      I32 = 0x4D
+  let end_key:  I32 = 0x4D
   let pagedown: I32 = 0x4E
 
   let right: I32 = 0x4F // Right arrow
