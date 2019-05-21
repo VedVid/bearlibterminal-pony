@@ -45,164 +45,164 @@ use @color_from_argb[U32](a: U8, r: U8, g: U8, b: U8)
 // Constants
 class TK
   // Scan codes for events/states
-  let _a: I32 = 0x04
-  let _b: I32 = 0x05
-  let _c: I32 = 0x06
-  let _d: I32 = 0x07
-  let _e: I32 = 0x08
-  let _f: I32 = 0x09
-  let _g: I32 = 0x0A
-  let _h: I32 = 0x0B
-  let _i: I32 = 0x0C
-  let _j: I32 = 0x0D
-  let _k: I32 = 0x0E
-  let _l: I32 = 0x0F
-  let _m: I32 = 0x10
-  let _n: I32 = 0x11
-  let _o: I32 = 0x12
-  let _p: I32 = 0x13
-  let _q: I32 = 0x14
-  let _r: I32 = 0x15
-  let _s: I32 = 0x16
-  let _t: I32 = 0x17
-  let _u: I32 = 0x18
-  let _v: I32 = 0x19
-  let _w: I32 = 0x1A
-  let _x: I32 = 0x1B
-  let _y: I32 = 0x1C
-  let _z: I32 = 0x1D
+  let a: I32 = 0x04
+  let b: I32 = 0x05
+  let c: I32 = 0x06
+  let d: I32 = 0x07
+  let e: I32 = 0x08
+  let f: I32 = 0x09
+  let g: I32 = 0x0A
+  let h: I32 = 0x0B
+  let i: I32 = 0x0C
+  let j: I32 = 0x0D
+  let k: I32 = 0x0E
+  let l: I32 = 0x0F
+  let m: I32 = 0x10
+  let n: I32 = 0x11
+  let o: I32 = 0x12
+  let p: I32 = 0x13
+  let q: I32 = 0x14
+  let r: I32 = 0x15
+  let s: I32 = 0x16
+  let t: I32 = 0x17
+  let u: I32 = 0x18
+  let v: I32 = 0x19
+  let w: I32 = 0x1A
+  let x: I32 = 0x1B
+  let y: I32 = 0x1C
+  let z: I32 = 0x1D
 
-  let _n1: I32 = 0x1E
-  let _n2: I32 = 0x1F
-  let _n3: I32 = 0x20
-  let _n4: I32 = 0x21
-  let _n5: I32 = 0x22
-  let _n6: I32 = 0x23
-  let _n7: I32 = 0x24
-  let _n8: I32 = 0x25
-  let _n9: I32 = 0x26
-  let _n0: I32 = 0x27
+  let n1: I32 = 0x1E
+  let n2: I32 = 0x1F
+  let n3: I32 = 0x20
+  let n4: I32 = 0x21
+  let n5: I32 = 0x22
+  let n6: I32 = 0x23
+  let n7: I32 = 0x24
+  let n8: I32 = 0x25
+  let n9: I32 = 0x26
+  let n0: I32 = 0x27
 
-  let _return:     I32 = 0x28
-  let _enter :     I32 = 0x28
-  let _escape:     I32 = 0x29
-  let _backspace:  I32 = 0x2A
-  let _tab:        I32 = 0x2B
-  let _space:      I32 = 0x2C
-  let _minus:      I32 = 0x2D //  -  //
-  let _equals:     I32 = 0x2E //  =  //
-  let _lbracket:   I32 = 0x2F //  [  //
-  let _rbracket:   I32 = 0x30 //  ]  //
-  let _backslash:  I32 = 0x31 //  \  //
-  let _semicolon:  I32 = 0x33 //  ;  //
-  let _apostrophe: I32 = 0x34 //  '  //
-  let _grave:      I32 = 0x35 //  `  //
-  let _comma:      I32 = 0x36 //  ,  //
-  let _period:     I32 = 0x37 //  .  //
-  let _slash:      I32 = 0x38 //  /  //
+  let return_:    I32 = 0x28
+  let enter :     I32 = 0x28
+  let escape:     I32 = 0x29
+  let backspace:  I32 = 0x2A
+  let tab:        I32 = 0x2B
+  let space:      I32 = 0x2C
+  let minus:      I32 = 0x2D //  -  //
+  let equals:     I32 = 0x2E //  =  //
+  let lbracket:   I32 = 0x2F //  [  //
+  let rbracket:   I32 = 0x30 //  ]  //
+  let backslash:  I32 = 0x31 //  \  //
+  let semicolon:  I32 = 0x33 //  ;  //
+  let apostrophe: I32 = 0x34 //  '  //
+  let grave:      I32 = 0x35 //  `  //
+  let comma:      I32 = 0x36 //  ,  //
+  let period:     I32 = 0x37 //  .  //
+  let slash:      I32 = 0x38 //  /  //
 
-  let _f1:  I32 = 0x3A
-  let _f2:  I32 = 0x3B
-  let _f3:  I32 = 0x3C
-  let _f4:  I32 = 0x3D
-  let _f5:  I32 = 0x3E
-  let _f6:  I32 = 0x3F
-  let _f7:  I32 = 0x40
-  let _f8:  I32 = 0x41
-  let _f9:  I32 = 0x42
-  let _f10: I32 = 0x43
-  let _f11: I32 = 0x44
-  let _f12: I32 = 0x45
+  let f1:  I32 = 0x3A
+  let f2:  I32 = 0x3B
+  let f3:  I32 = 0x3C
+  let f4:  I32 = 0x3D
+  let f5:  I32 = 0x3E
+  let f6:  I32 = 0x3F
+  let f7:  I32 = 0x40
+  let f8:  I32 = 0x41
+  let f9:  I32 = 0x42
+  let f10: I32 = 0x43
+  let f11: I32 = 0x44
+  let f12: I32 = 0x45
 
-  let _pause:    I32 = 0x48 // Pause/Break
-  let _insert:   I32 = 0x49
-  let _home:     I32 = 0x4A
-  let _pageup:   I32 = 0x4B
-  let _delete:   I32 = 0x4C
-  let _end:      I32 = 0x4D
-  let _pagedown: I32 = 0x4E
+  let pause:    I32 = 0x48 // Pause/Break
+  let insert:   I32 = 0x49
+  let home:     I32 = 0x4A
+  let pageup:   I32 = 0x4B
+  let delete:   I32 = 0x4C
+  let end_:      I32 = 0x4D
+  let pagedown: I32 = 0x4E
 
-  let _right: I32 = 0x4F // Right arrow
-  let _left:  I32 = 0x50 // Left arrow
-  let _down:  I32 = 0x51 // Down arrow
-  let _up:    I32 = 0x52 // Up arrow
+  let right: I32 = 0x4F // Right arrow
+  let left:  I32 = 0x50 // Left arrow
+  let down:  I32 = 0x51 // Down arrow
+  let up:    I32 = 0x52 // Up arrow
 
-  let _kp_divide:   I32 = 0x54 // '/' on numpad
-  let _kp_multiply: I32 = 0x55 // '*' on numpad
-  let _kp_minus:    I32 = 0x56 // '-' on numpad
-  let _kp_plus:     I32 = 0x57 // '+' on numpad
-  let _kp_enter:    I32 = 0x58
+  let kp_divide:   I32 = 0x54 // '/' on numpad
+  let kp_multiply: I32 = 0x55 // '*' on numpad
+  let kp_minus:    I32 = 0x56 // '-' on numpad
+  let kp_plus:     I32 = 0x57 // '+' on numpad
+  let kp_enter:    I32 = 0x58
 
-  let _kp_1: I32 = 0x59
-  let _kp_2: I32 = 0x5A
-  let _kp_3: I32 = 0x5B
-  let _kp_4: I32 = 0x5C
-  let _kp_5: I32 = 0x5D
-  let _kp_6: I32 = 0x5E
-  let _kp_7: I32 = 0x5F
-  let _kp_8: I32 = 0x60
-  let _kp_9: I32 = 0x61
-  let _kp_0: I32 = 0x62
+  let kp_1: I32 = 0x59
+  let kp_2: I32 = 0x5A
+  let kp_3: I32 = 0x5B
+  let kp_4: I32 = 0x5C
+  let kp_5: I32 = 0x5D
+  let kp_6: I32 = 0x5E
+  let kp_7: I32 = 0x5F
+  let kp_8: I32 = 0x60
+  let kp_9: I32 = 0x61
+  let kp_0: I32 = 0x62
 
-  let _kp_period: I32 = 0x63 // '.' on numpad
+  let kp_period: I32 = 0x63 // '.' on numpad
   
-  let _shift:   I32 = 0x70
-  let _control: I32 = 0x71
-  let _alt:     I32 = 0x72
+  let shift:   I32 = 0x70
+  let control: I32 = 0x71
+  let alt:     I32 = 0x72
 
   // Mouse events/states
-  let _mouse_left:    I32 = 0x80 // Buttons
-  let _mouse_right:   I32 = 0x81
-  let _mouse_middle:  I32 = 0x82
-  let _mouse_x1:      I32 = 0x83
-  let _mouse_x2:      I32 = 0x84
-  let _mouse_move:    I32 = 0x85 // Movement event
-  let _mouse_scroll:  I32 = 0x86 // Mouse scroll event
-  let _mouse_x:       I32 = 0x87 // Curson position in cells
-  let _mouse_y:       I32 = 0x88
-  let _mouse_pixel_x: I32 = 0x89 // Curson position in pixels
-  let _mouse_pixel_y: I32 = 0x8A
-  let _mouse_wheel:   I32 = 0x8B // Scroll direction and amount
-  let _mouse_clocks:  I32 = 0x8C // Number of consecutive clicks
+  let mouse_left:    I32 = 0x80 // Buttons
+  let mouse_right:   I32 = 0x81
+  let mouse_middle:  I32 = 0x82
+  let mouse_x1:      I32 = 0x83
+  let mouse_x2:      I32 = 0x84
+  let mouse_move:    I32 = 0x85 // Movement event
+  let mouse_scroll:  I32 = 0x86 // Mouse scroll event
+  let mouse_x:       I32 = 0x87 // Curson position in cells
+  let mouse_y:       I32 = 0x88
+  let mouse_pixel_x: I32 = 0x89 // Curson position in pixels
+  let mouse_pixel_y: I32 = 0x8A
+  let mouse_wheel:   I32 = 0x8B // Scroll direction and amount
+  let mouse_clocks:  I32 = 0x8C // Number of consecutive clicks
 
   // If key was released instead of pressed,
   // its key will be OR'ed with _key_released:
   // a) pressed 'A': 0x04
   // b) released 'A': 0x04|_key_released = 0x104
-  let _key_released: I32 = 0x100
+  let key_released: I32 = 0x100
 
   // Virtual key codes for internal terminal states/variables.
   // These can be accessed via terminal_state function.
-  let _width:       I32 = 0xC0
-  let _height:      I32 = 0xC1
-  let _cell_width:  I32 = 0xC2
-  let _cell_height: I32 = 0xC3
-  let _color:       I32 = 0xC4
-  let _bkcolor:     I32 = 0xC5
-  let _layer:       I32 = 0xC6
-  let _composition: I32 = 0xC7
-  let _char:        I32 = 0xC8
-  let _wchar:       I32 = 0xC9
-  let _event:       I32 = 0xCA
-  let _fullscreen:  I32 = 0xCB
+  let width:       I32 = 0xC0
+  let height:      I32 = 0xC1
+  let cell_width:  I32 = 0xC2
+  let cell_height: I32 = 0xC3
+  let color:       I32 = 0xC4
+  let bkcolor:     I32 = 0xC5
+  let layer:       I32 = 0xC6
+  let composition: I32 = 0xC7
+  let char:        I32 = 0xC8
+  let wchar:       I32 = 0xC9
+  let event:       I32 = 0xCA
+  let fullscreen:  I32 = 0xCB
 
   // Other events
-  let _close:   I32 = 0xE0
-  let _resided: I32 = 0xE1
+  let close:   I32 = 0xE0
+  let resided: I32 = 0xE1
 
   // Generic mode enum.
   // Right now it is used for composition option only.
-  let _off: I32 = 0
-  let _on:  I32 = 1
+  let off: I32 = 0
+  let on:  I32 = 1
 
   // Input result codes for terminal_read function.
-  let _input_none:      I32 = 0
-  let _input_cancelled: I32 = -1
+  let input_none:      I32 = 0
+  let input_cancelled: I32 = -1
 
-  let _align_default: I32 = 0
-  let _align_left:    I32 = 1
-  let _align_right:   I32 = 2
-  let _align_center:  I32 = 3
-  let _align_top:     I32 = 4
-  let _align_bottom:  I32 = 8
-  let _align_middle:  I32 = 12
+  let align_default: I32 = 0
+  let align_left:    I32 = 1
+  let align_right:   I32 = 2
+  let align_center:  I32 = 3
+  let align_top:     I32 = 4
+  let align_bottom:  I32 = 8
+  let align_middle:  I32 = 12
