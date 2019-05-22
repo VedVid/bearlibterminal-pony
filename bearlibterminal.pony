@@ -213,3 +213,21 @@ class Terminal
   let tk_align_top:     I32 = 4
   let tk_align_bottom:  I32 = 8
   let tk_align_middle:  I32 = 12
+
+  // Initialization and configuration
+  fun open(): I32 =>
+    @terminal_open()
+
+  fun close() =>
+    @terminal_close()
+
+  fun set(value: String): I32 =>
+    @terminal_set(value.cstring())
+
+  //Output state
+  fun refresh() =>
+    @terminal_refresh()
+
+  //Input
+  fun read(): I32 =>
+    @terminal_read()
