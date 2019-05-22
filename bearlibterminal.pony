@@ -5,7 +5,7 @@ use "lib:BearLibTerminal"
 // Initialization and configuration
 use @terminal_open[I32]()
 use @terminal_close[None]()
-use @terminal_set[I32](value: Pointer[U8 val] tag)
+use @terminal_set8[I32](value: Pointer[U8 val] tag)
 
 
 // Output state
@@ -222,7 +222,7 @@ class Terminal
     @terminal_close()
 
   fun set(value: String): I32 =>
-    @terminal_set(value.cstring())
+    @terminal_set8(value.cstring())
 
   //Output state
   fun refresh() =>
