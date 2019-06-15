@@ -270,8 +270,13 @@ class Terminal
   fun pick_bkcolor(x: I32, y: I32): U32 =>
     @terminal_pick_bkcolor(x, y)
 
-  fun print_ext_8(x: I32, y: I32, w: I32, h: I32, alignment: I32, s: Pointer[U8 val] tag, out_w: Pointer[I32], out_h: Pointer[I32]) =>
-    @terminal_print_ext8(x, y, w, h, alignment, s, out_w, out_h)
+  fun print_ext_8(x: I32, y: I32, w: I32, h: I32, alignment: I32, s: String) =>
+    var out_h: I32 = 0
+    var out_w: I32 = 0
+    @terminal_print_ext8(x, y, w, h, alignment, s.cstring(), addressof out_h, addressof out_w)
+
+  fun print(x: I32, y: I32, s: String) =>
+    print_ext_8(x, y, 0, 0, tk_align_default, s)
 
   fun measure_ext_8(w: I32, h: I32, s: Pointer[U8 val] tag, out_w: Pointer[I32], out_h: Pointer[I32]) =>
     @terminal_measure_ext8(w, h, s, out_w, out_h)
