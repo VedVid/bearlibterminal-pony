@@ -221,6 +221,7 @@ class Terminal
   fun close() =>
     @terminal_close()
 
+  //change it to return I8 or to use terminal_set32 ???
   fun set(value: String): I32 =>
     @terminal_set8(value.cstring())
 
@@ -257,7 +258,7 @@ class Terminal
     @terminal_put(x, y, code)
 
   //DO NOT USE: corners needs more work and are unsafe to use now
-  fun put_ext(x: I32, y: I32, dx: I32, dy: I32, code: I32, corners: Array[U32])
+  fun put_ext(x: I32, y: I32, dx: I32, dy: I32, code: I32, corners: Array[U32]) =>
     @terminal_put_ext(x, y, dx, dy, code, corners)
 
   fun pick(x: I32, y: I32, index: I32): I32 =>
@@ -266,14 +267,14 @@ class Terminal
   fun pick_color(x: I32, y: I32, index: I32): U32 =>
     @terminal_pick_color(x, y, index)
 
-  fun pick_bkcolor(x: I32, y: I32, index: I32): U32 =>
-    @terminal_pick_bkcolor(x, y, index)
+  fun pick_bkcolor(x: I32, y: I32): U32 =>
+    @terminal_pick_bkcolor(x, y)
 
   fun print_ext_8(x: I32, y: I32, w: I32, h: I32, alignment: I32, s: Pointer[U8 val] tag, out_w: Pointer[I32], out_h: Pointer[I32]) =>
-    @terminal_print_ext8(x, y, w, h, alignemnt, s, out_w, out_h)
+    @terminal_print_ext8(x, y, w, h, alignment, s, out_w, out_h)
 
   fun measure_ext_8(w: I32, h: I32, s: Pointer[U8 val] tag, out_w: Pointer[I32], out_h: Pointer[I32]) =>
-    terminal_measure_ext8(w, h, s, out_w, out_h)
+    @terminal_measure_ext8(w, h, s, out_w, out_h)
 
   //Input
   fun state(code: I32): I32 =>
@@ -298,8 +299,8 @@ class Terminal
     @terminal_delay(period)
 
   //DO NOT USE: I don't know if string() is proper way to convert pointer
-  fun get_8(key: Pointer[U8 val] tag, def: Pointer[U8 val] tag): String =>
-    let s: String = @terminal_get8(key, def).string()
+  fun get_8(key: Pointer[U8 val] tag, def: Pointer[U8 val] tag): Pointer[U8 val] tag =>
+    @terminal_get8(key, def)
 
   fun color_from_name_8(name: String): U32 =>
     @color_from_name8(name.cstring())
