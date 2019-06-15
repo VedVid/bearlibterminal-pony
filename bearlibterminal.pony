@@ -226,8 +226,9 @@ class Terminal
     @terminal_set8(value.cstring())
 
   //Output state
-  fun color(col: U32) =>
-    @terminal_color(col)
+  fun color(col: String) =>
+    let col_u: U32 = color_from_name_8(col)
+    @terminal_color(col_u)
 
   fun bk_color(col: U32) =>
     @terminal_bkcolor(col)
